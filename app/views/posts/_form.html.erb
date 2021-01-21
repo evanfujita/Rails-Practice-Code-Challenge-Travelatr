@@ -1,0 +1,10 @@
+<h1>New Post</h1>
+<%= form_for(@post) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :bio %>
+    <%= f.text_field :bio %>
+    <%= f.label :blogger %>
+    <%= f.collection_select (:name, @bloggers, :id, :name) %>
+    <%= f.submit %>
+<% end %>

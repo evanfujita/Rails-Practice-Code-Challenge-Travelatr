@@ -6,4 +6,9 @@ class Post < ApplicationRecord
     validates :title, presence: true
     validates :content, length: { minimum: 100 }
 
+    def extract_content
+        self.content.each do |string|
+            string[4]
+        end
+    end
 end

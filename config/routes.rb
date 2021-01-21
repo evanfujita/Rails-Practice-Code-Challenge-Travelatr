@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
-  resources :posts, :bloggers, :destinations
+  resources :posts 
+  resources :bloggers 
+  resources :destinations
 
 end
